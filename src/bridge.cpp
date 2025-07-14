@@ -105,7 +105,7 @@ create_bridge_from_2_to_1(
 {
   auto factory = get_factory(ros1_type_name, ros2_type_name);
 
-  bool ros1_pub_latching = (topic_name == "/tf_static");
+  bool ros1_pub_latching = (ros1_topic_name == "/tf_static");
 
   auto ros1_pub = factory->create_ros1_publisher(
     ros1_node, ros1_topic_name, publisher_queue_size, ros1_pub_latching);
